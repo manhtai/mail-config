@@ -1,6 +1,6 @@
 # Send mail config ----------------------------------
 set from     = "vo@manhtai.com"
-set sendmail = "/usr/bin/msmtp -C ~/.mutt/msmtprc -a manhtai"
+set sendmail = "/usr/bin/msmtp -C /home/manhtai/.mutt/msmtprc -a manhtai"
 set sendmail_wait = 0
 unset record
 
