@@ -18,13 +18,13 @@ sudo python setup.py install
 
 # get vcard2abook to convert vcard to abook
 wget https://raw.github.com/yaroot/scripts/master/vcard2abook.py
-python3 vcard2abook.py  -f /data/Downloads/contacts.vcf -o /data/Dropbox/Private/Contacts/abook
+python3 vcard2abook.py  -f /data/Downloads/contacts.vcf -o /data/Dropbox/Docs/Private/Contacts/abook
 
 ```
 
 ## Config things:
 
-All my things is in this repo.
+All my config is in this repo.
 
 
 ## Run things:
@@ -48,10 +48,6 @@ mutt
 chmod 600 ~/.mutt/msmtprc
 
 ```
-
-## Not done yet
-
-**How to sync contacts?**
 
 ## Reference:
 
