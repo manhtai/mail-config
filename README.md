@@ -5,7 +5,7 @@ Mutt + OfflineIMAP + MSMTP + Gnome-Keyring = EMAIL CLIENT
 
 ```
 # install some from ubuntu package manager
-sudo apt-get install mutt mutt-patched msmtp seahorse libsecret-tools gpicview abook urlview mairix maildir-utils abook
+sudo apt-get install mutt mutt-patched msmtp seahorse libsecret-tools gpicview abook urlview mairix abook
 
 # install keyring for python to use gnome-keyring
 sudo pip2 install keyring

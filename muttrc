@@ -7,9 +7,19 @@ unset record
 # Sidebar Patch --------------------------------------
 set sidebar_visible = yes
 set sidebar_width   = 24
-bind index <down>   sidebar-next
-bind index <up>     sidebar-prev
-bind index <right>  sidebar-open
+# bind index <down>   sidebar-next
+# bind index <up>     sidebar-prev
+# bind index <right>  sidebar-open
+
+# Gmail-style keyboard shortcuts
+macro index ga "<change-folder>=vo-manhtai.com/archive<enter>" "Go to all mail"
+macro index gd "<change-folder>=vo-manhtai.com/drafts<enter>" "Go to drafts"
+macro index gi "<change-folder>=vo-manhtai.com/INBOX<enter>" "Go to inbox"
+macro index gs "<change-folder>=vo-manhtai.com/starred<enter>" "Go to starred messages"
+macro index go "<change-folder>=vo-manhtai.com/sent<enter>" "Go to sent messages"
+macro index gt "<change-folder>=vo-manhtai.com/trash<enter>" "Go to trash"
+macro index,pager y "<save-message>=vo-manhtai.com/archive<enter><enter>" "Archive"
+macro index,pager d "<save-message>=vo-manhtai.com/trash<enter><enter>" "Trash"
 
 # Paths ----------------------------------------------
 set folder           = ~/.mail               # mailbox location
@@ -25,7 +35,7 @@ set mbox_type = Maildir  # mailbox type
 set timeout = 3          # idle time before scanning
 set mail_check = 0       # minimum time between scans
 unset move               # gmail does that
-set delete               # don't ask, just do
+# set delete               # don't ask, just do
 unset confirmappend      # don't ask, just do!
 set quit                 # don't ask, just do!!
 unset mark_old           # read/new is good enough for me
@@ -56,6 +66,8 @@ mailboxes +vo-manhtai.com/INBOX \
           +vo-manhtai.com/archive \
           +vo-manhtai.com/sent \
           +vo-manhtai.com/drafts \
+          +vo-manhtai.com/starred \
+          +vo-manhtai.com/trash
 
 # Other special folders.
 set mbox      = "+vo-manhtai.com/archive"
@@ -152,5 +164,4 @@ macro index / "<change-folder>=mairix<enter><shell-escape>mairix " "Change the f
 
 # Colors ------------------------------------------------
 source ~/.mutt/colors.muttrc
-
 
