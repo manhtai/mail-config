@@ -19,7 +19,7 @@ macro index gs "<change-folder>=vo-manhtai.com/starred<enter>" "Go to starred me
 macro index go "<change-folder>=vo-manhtai.com/sent<enter>" "Go to sent messages"
 macro index gt "<change-folder>=vo-manhtai.com/trash<enter>" "Go to trash"
 macro index,pager y "<save-message>=vo-manhtai.com/archive<enter><enter>" "Archive"
-macro index,pager d "<save-message>=vo-manhtai.com/trash<enter><enter>" "Trash"
+# macro index,pager d "<save-message>=vo-manhtai.com/trash<enter><enter>" "Trash"
 
 # Paths ----------------------------------------------
 set folder           = ~/.mail               # mailbox location
@@ -35,7 +35,7 @@ set mbox_type = Maildir  # mailbox type
 set timeout = 3          # idle time before scanning
 set mail_check = 0       # minimum time between scans
 unset move               # gmail does that
-# set delete               # don't ask, just do
+set delete               # don't ask, just do
 unset confirmappend      # don't ask, just do!
 set quit                 # don't ask, just do!!
 unset mark_old           # read/new is good enough for me
@@ -106,7 +106,7 @@ macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
 # Pager View Options ---------------------------------
 set pager_index_lines = 10 # number of index lines to show
 set pager_context = 3      # number of context lines to show
-set pager_stop             # don't go to next message automatically
+# set pager_stop             # don't go to next message automatically
 set menu_scroll            # scroll in menus
 set tilde                  # show tildes like in vim
 unset markers              # no ugly plus signs
