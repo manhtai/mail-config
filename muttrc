@@ -73,7 +73,7 @@ set postponed = "+vo-manhtai.com/drafts"
 
 
 # Index View Options ---------------------------------
-set date_format = "%m/%d"
+set date_format = "%d/%m"
 set index_format = "[%Z]  %D  %-20.20F  %s"
 set sort = threads                         # like gmail
 set sort_aux = reverse-last-date-received  # like gmail
@@ -149,6 +149,7 @@ bind index p recall-message
 # Address book -----------------------------------------
 set query_command="abook -C ~/.mutt/abookrc --datafile /data/Dropbox/Docs/Private/Contacts/abook --mutt-query '%s'"
 macro index,pager A "|abook -C ~/.mutt/abookrc --datafile /data/Dropbox/Docs/Private/Contacts/abook --add-email-quiet\n" 'add sender to abook'
+bind editor <tab> complete-query
 
 # Searching ---------------------------------------------
 bind index N search-opposite
