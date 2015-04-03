@@ -18,8 +18,7 @@ macro index gi "<change-folder>=vo-manhtai.com/INBOX<enter>" "Go to inbox"
 macro index gs "<change-folder>=vo-manhtai.com/starred<enter>" "Go to starred messages"
 macro index go "<change-folder>=vo-manhtai.com/sent<enter>" "Go to sent messages"
 macro index gt "<change-folder>=vo-manhtai.com/trash<enter>" "Go to trash"
-macro index,pager y "<tag-prefix><clear-flag>N<untag-pattern><enter><save-message>=vo-manhtai.com/archive<enter><enter>" "Archive"
-macro index,pager d "<save-message>=vo-manhtai.com/trash<enter><enter>" "Trash"
+macro index,pager y "<tag-prefix><clear-flag>N<untag-pattern>.<enter><save-message>=vo-manhtai.com/archive<enter>" "Archive"
 
 # Paths ----------------------------------------------
 set folder           = ~/.mail               # mailbox location
@@ -55,8 +54,9 @@ hdr_order from: to: cc: date: subject:  # and in this order
 
 # Account Settings -----------------------------------
 
-# Default inbox.
+# Special folders ------------------------------------
 set spoolfile = "+vo-manhtai.com/INBOX"
+set postponed = "+vo-manhtai.com/drafts"
 
 # Alternate email addresses.
 alternates "vomanhtai@gmail.com|manhtai@outlook.com"
@@ -66,11 +66,6 @@ mailboxes +vo-manhtai.com/INBOX \
           +vo-manhtai.com/archive \
           +vo-manhtai.com/sent \
           +vo-manhtai.com/drafts 
-
-# Other special folders.
-set mbox      = "+vo-manhtai.com/archive"
-set postponed = "+vo-manhtai.com/drafts"
-
 
 # Index View Options ---------------------------------
 set date_format = "%d/%m"
@@ -90,7 +85,7 @@ bind index R        group-reply
 bind index <tab>    sync-mailbox
 bind index <space>  collapse-thread
 
-# Ctrl-R to mark all as read
+# Ctrl-r to mark all as read
 macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
 
 # Sync email
