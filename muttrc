@@ -19,7 +19,7 @@ macro index gs "<change-folder>=vo-manhtai.com/starred<enter>" "Go to starred me
 macro index go "<change-folder>=vo-manhtai.com/sent<enter>" "Go to sent messages"
 macro index gt "<change-folder>=vo-manhtai.com/trash<enter>" "Go to trash"
 macro index,pager y "<tag-prefix><clear-flag>N<untag-pattern><enter><save-message>=vo-manhtai.com/archive<enter><enter>" "Archive"
-# macro index,pager d "<save-message>=vo-manhtai.com/trash<enter><enter>" "Trash"
+macro index,pager d "<save-message>=vo-manhtai.com/trash<enter><enter>" "Trash"
 
 # Paths ----------------------------------------------
 set folder           = ~/.mail               # mailbox location
@@ -34,7 +34,7 @@ set wait_key = no        # shut up, mutt
 set mbox_type = Maildir  # mailbox type
 set timeout = 3          # idle time before scanning
 set mail_check = 0       # minimum time between scans
-# unset move               # gmail does that
+unset move               # gmail does that
 set delete               # don't ask, just do
 unset confirmappend      # don't ask, just do!
 set quit                 # don't ask, just do!!
@@ -65,9 +65,7 @@ alternates "vomanhtai@gmail.com|manhtai@outlook.com"
 mailboxes +vo-manhtai.com/INBOX \
           +vo-manhtai.com/archive \
           +vo-manhtai.com/sent \
-          +vo-manhtai.com/drafts \
-          +vo-manhtai.com/starred \
-          +vo-manhtai.com/trash
+          +vo-manhtai.com/drafts 
 
 # Other special folders.
 set mbox      = "+vo-manhtai.com/archive"
@@ -106,7 +104,7 @@ macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
 # Pager View Options ---------------------------------
 set pager_index_lines = 10 # number of index lines to show
 set pager_context = 3      # number of context lines to show
-# set pager_stop             # don't go to next message automatically
+set pager_stop             # don't go to next message automatically
 set menu_scroll            # scroll in menus
 set tilde                  # show tildes like in vim
 unset markers              # no ugly plus signs
@@ -126,7 +124,7 @@ bind pager R  group-reply
 bind attach <return> view-mailcap
 
 # Compose View Options -------------------------------
-set realname = "Mạnh Tài"          # who am i?
+set realname = "Mạnh Tài"            # who am i?
 set envelope_from                    # which from?
 set sig_dashes                       # dashes before sig
 set edit_headers                     # show headers when composing
@@ -142,7 +140,7 @@ set reverse_name                     # reply as whomever it was to
 set include                          # include message in replies
 set forward_quote                    # include message in forwards
 
-set editor = "vim"        # Use terminal Vim to compose email.
+set editor = "vim"                   # Use terminal Vim to compose email.
 
 # Pospone message --------------------------------------
 bind compose p postpone-message
