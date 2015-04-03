@@ -18,7 +18,8 @@ macro index gi "<change-folder>=vo-manhtai.com/INBOX<enter>" "Go to inbox"
 macro index gs "<change-folder>=vo-manhtai.com/starred<enter>" "Go to starred messages"
 macro index go "<change-folder>=vo-manhtai.com/sent<enter>" "Go to sent messages"
 macro index gt "<change-folder>=vo-manhtai.com/trash<enter>" "Go to trash"
-macro index,pager D "<save-message>=vo-manhtai.com/trash<enter>" "Trash it!"
+macro index,pager y "<tag-prefix><clear-flag>N<untag-pattern>.<enter><save-message>=vo-manhtai.com/archive<enter><refresh>" "Archive"
+macro index,pager d "<save-message>=vo-manhtai.com/trash<enter>" "Trash it!"
 
 # Paths ----------------------------------------------
 set folder           = ~/.mail               # mailbox location
