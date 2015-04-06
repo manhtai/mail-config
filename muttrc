@@ -7,9 +7,6 @@ unset record
 # Sidebar Patch --------------------------------------
 set sidebar_visible = yes
 set sidebar_width   = 24
-# bind index <down>   sidebar-next
-# bind index <up>     sidebar-prev
-# bind index <right>  sidebar-open
 
 # Gmail-style keyboard shortcuts
 macro index ga "<change-folder>=vo-manhtai.com/archive<enter>" "Go to all mail"
@@ -18,7 +15,7 @@ macro index gi "<change-folder>=vo-manhtai.com/INBOX<enter>" "Go to inbox"
 macro index gs "<change-folder>=vo-manhtai.com/starred<enter>" "Go to starred messages"
 macro index go "<change-folder>=vo-manhtai.com/sent<enter>" "Go to sent messages"
 macro index gt "<change-folder>=vo-manhtai.com/trash<enter>" "Go to trash"
-macro index,pager D "<save-message>=vo-manhtai.com/trash<enter>" "Trash it!"
+# macro index,pager D "<save-message>=vo-manhtai.com/trash<enter>" "Trash it!"
 
 # Paths ----------------------------------------------
 set folder           = ~/.mail               # mailbox location
@@ -33,7 +30,7 @@ set wait_key = no        # shut up, mutt
 set mbox_type = Maildir  # mailbox type
 set timeout = 3          # idle time before scanning
 set mail_check = 0       # minimum time between scans
-set move
+unset move               # gmail does that
 set delete               # don't ask, just do
 unset confirmappend      # don't ask, just do!
 set quit                 # don't ask, just do!!

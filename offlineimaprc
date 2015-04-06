@@ -33,5 +33,6 @@ nametrans = lambda folder: {'[Gmail]/Drafts':    'drafts',
                             '[Gmail]/All Mail':  'archive'}.get(folder, folder)
 folderfilter = lambda folder: folder not in ['[Gmail]/Chats',
                                              '[Gmail]/Important',
+                                             '[Gmail]/Trash',
                                              '[Gmail]/Spam']
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
