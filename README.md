@@ -1,52 +1,66 @@
-Mutt + OfflineIMAP + MSMTP + Gnome-Keyring = EMAIL CLIENT
-=========================================================
+Mutt + OfflineIMAP + Msmtp = Email client
+=========================================
 
-## Get all things:
+## Get things:
 
-```
-# install some from ubuntu package manager
-sudo apt-get install mutt mutt-patched msmtp seahorse libsecret-tools gpicview abook urlview mairix abook
+```bash
+# install essential software from ubuntu package manager
+sudo apt-get install mutt mutt-patched msmtp seahorse libsecret-tools gpicview abook urlview mairix abook offlineimap
 
-# install keyring for python to use gnome-keyring
+# install keyring for python to get password from gnome-keyring
 sudo pip2 install keyring
-
-# get offlineimap from github, here I use v6.5.6
-wget https://github.com/OfflineIMAP/offlineimap/archive/v6.5.6.tar.gz
-tar -xvf v6.5.6.tar.gz
-cd v6.5.6
-sudo python setup.py install
-
-# get vcard2abook to convert vcard to abook
-wget https://raw.github.com/yaroot/scripts/master/vcard2abook.py
-python3 vcard2abook.py  -f /data/Downloads/contacts.vcf -o /data/Dropbox/Docs/Private/Contacts/abook
-
 ```
 
 ## Config things:
 
-All my config is in this repo.
+- If you want to convert from Gmail contact
 
+```bash
+# get vcard2abook to convert vcard to abook
+wget https://raw.github.com/yaroot/scripts/master/vcard2abook.py
+python3 vcard2abook.py  -f /data/Downloads/contacts.vcf -o /data/Dropbox/Docs/Private/Contacts/abook
+```
+
+- Get config file and edit as you wish
+
+```bash
+# Clone mine
+git clone https://bitbucket.org/manhtai/mutt-config ~/.mutt
+cd ~/.mutt
+
+# Config your imap account
+vim offlineimaprc
+
+# Config your mutt
+vim muttrc
+
+# Config your smtp account
+vim msmtprc
+
+# Config you abook
+vim abookrc
+```
 
 ## Run things:
 
-```
-# First thing first
+```bash
+# Download all mail to your computer
 offlineimap
 
-# Second thing second
+# Index mail for searching
 mairix -v
 
-# Third thing last
+# Read and send your mail!
 mutt
-
 ```
 
 ## Fix somethings:
 
-```
-# chmod for msmtprc
+```bash
+# chmod for msmtprc if got permission error
 chmod 600 ~/.mutt/msmtprc
 
+# You got any?
 ```
 
 ## Reference:
@@ -56,3 +70,4 @@ chmod 600 ~/.mutt/msmtprc
 [1]: https://www.proteansec.com/linux/the-ultimate-guide-to-mutt/
 [2]: http://stevelosh.com/blog/2012/10/the-homely-mutt
 [3]: http://www.google.com
+
