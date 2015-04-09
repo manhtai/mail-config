@@ -1,3 +1,8 @@
+# Html now!
+text/html; firefox %s
+text/plain ; vim %s
+
+
 # Pdf view
 application/pdf; evince %s
 
