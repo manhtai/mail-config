@@ -1,6 +1,8 @@
 Mutt + OfflineIMAP + Msmtp = Email client
 =========================================
 
+![mutt](mutt_overview.png)
+
 ## Get things:
 
 ```bash

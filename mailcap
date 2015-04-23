@@ -9,6 +9,7 @@ application/pdf; evince %s
 # Word view
 application/vnd.ms-word; libreoffice4.3 %s
 application/vnd.ms-excel; libreoffice4.3 %s
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; libreoffice4.3 %s
 
 # Image view
 image/jpg; gpicview %s
